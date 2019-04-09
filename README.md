@@ -3,6 +3,26 @@ A Rust library for PostgreSQL In-Database CRUD.
 
 ## Examples
 
+### Insert some data:
+
+```Rust
+let user = User {
+              user_id: "38476a73",
+              devices: vec![
+                  Device {
+                      device_id: "a916",
+                  },
+                  Device {
+                      device_id: "445d",
+                  },
+              ],
+           };
+March::new()
+      .save("insert into user {{user}}")
+      .params_obj(user)
+      .exec();
+```
+
 ### Query for a single row:
 
 ```Rust
