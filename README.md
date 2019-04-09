@@ -8,6 +8,8 @@ A Rust library for PostgreSQL In-Database CRUD.
 ```Rust
 let user = User {
               user_id: "38476a73",
+              name: "Cris Liao",
+              email: "clia@163.com",
               devices: vec![
                   Device {
                       device_id: "a916",
@@ -53,8 +55,8 @@ let devices = March::new()
 
 ```Rust
 March::new()
-      .update("update user set mobile = {{mobile}}, update_time = LOCALTIMESTAMP where user_id = {{user_id}}")
-      .params_val((mobile, user_id))
+      .update("update user set email = {{email}}, update_time = LOCALTIMESTAMP where user_id = {{user_id}}")
+      .params_val((email, user_id))
       .exec();
 ```
 
