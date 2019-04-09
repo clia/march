@@ -1,5 +1,5 @@
 # March
-A Rust library for PostgreSQL In-Database CRUD. This assumes usage of PostgreSQL as an `Object Database`.
+A Rust library for PostgreSQL In-Database CRUD. This crate assumes the usage of PostgreSQL as an `Object Database`.
 
 ## Examples
 
