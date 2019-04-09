@@ -53,7 +53,7 @@ let devices = March::new()
 
 ```Rust
 March::new()
-      .update("update user set mobile = {{mobile}}, update_time = LOCALTIMESTAMP where user_id = {{user_id}}")
+      .modify("update user set mobile = {{mobile}}, update_time = LOCALTIMESTAMP where user_id = {{user_id}}")
       .params_val((mobile, user_id))
       .exec();
 ```
@@ -62,7 +62,7 @@ March::new()
 
 ```Rust
 March::new()
-      .update("delete from user where user_id = {{user_id}}")
+      .modify("delete from user where user_id = {{user_id}}")
       .params_val((user_id))
       .exec();
 ```
