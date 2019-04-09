@@ -23,7 +23,7 @@ March::new()
       .exec();
 ```
 
-### Query for a single row:
+### Query for a single object:
 
 ```Rust
 let user = March::new()
@@ -36,7 +36,7 @@ let user = March::new()
                 .expect("Error getting user");
 ```
 
-### Query for rows
+### Query for objects
 
 ```Rust
 let devices = March::new()
@@ -49,7 +49,7 @@ let devices = March::new()
                 .expect("Error getting user devices");
 ```
 
-### Update a row
+### Update an object
 
 ```Rust
 March::new()
@@ -58,7 +58,7 @@ March::new()
       .exec();
 ```
 
-### Delete a row
+### Delete an object
 
 ```Rust
 March::new()
