@@ -45,7 +45,7 @@ let devices = March::new()
                     user_id: "38476a73"
                 })
                 .as::<Device>()
-                .get_arr()
+                .get_vec()
                 .expect("Error getting user devices");
 ```
 
