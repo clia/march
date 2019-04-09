@@ -36,11 +36,12 @@ let user = March::new()
                 .expect("Error getting user");
 ```
 
-### Query for objects
+### Query for child objects
 
 ```Rust
 let devices = March::new()
-                .query("select * from device where user_id = {{user_id}}")
+                .query("select * from device where device_id in (
+                            select unnest(devices) from user where user_id = {{user_id}} )")
                 .params_obj(User {
                     user_id: "38476a73"
                 })
