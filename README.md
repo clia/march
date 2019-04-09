@@ -1,5 +1,5 @@
 # March
-A Rust library for In-Database CRUD.
+A Rust library for PostgreSQL In-Database CRUD.
 
 ## Examples
 
