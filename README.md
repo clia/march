@@ -42,7 +42,7 @@ let user = March::new()
 let devices = March::new()
                 .query("select * from device where user_id = {{user_id}}")
                 .params_obj(User {
-                    "user_id": "38476a73"
+                    user_id: "38476a73"
                 })
                 .as::<Device>()
                 .get_arr()
