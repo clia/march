@@ -41,7 +41,7 @@ let user = March::new()
 ```Rust
 let devices = March::new()
                 .query("select * from device where device_id in (
-                            select unnest(devices) from user where user_id = {{user_id}} )")
+                            select unnest(device_ids) from user where user_id = {{user_id}} )")
                 .params_obj(User {
                     user_id: "38476a73"
                 })
